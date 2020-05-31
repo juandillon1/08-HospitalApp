@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 //RUTAS
 import { AppRoutingModule } from './app.routes';
@@ -12,6 +13,9 @@ import { RegisterComponent } from './login/register.component';
 
 import { PagesModule } from './pages/pages.module';
 
+
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +25,9 @@ import { PagesModule } from './pages/pages.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PagesModule
+    PagesModule,
+    SweetAlert2Module,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
