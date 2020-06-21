@@ -9,11 +9,14 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 
+import { LoginGuardGuard } from '../services/guards/login-guard.guard';
+
 const pagesRoutes: Routes = [
 // pages se crea para separar el login del dashboard
   {
     path: '',
     component: PagesComponent,
+    canActivate: [ LoginGuardGuard ],
     // rutas hijas
     children: [
       {path: 'dashboard', component: DashboardComponent, data: { titulo: 'Dashboard' }},

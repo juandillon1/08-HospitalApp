@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 //RUTAS
 import { AppRoutingModule } from './app.routes';
@@ -13,8 +12,8 @@ import { RegisterComponent } from './login/register.component';
 
 import { PagesModule } from './pages/pages.module';
 
-
-import { FormsModule } from '@angular/forms';
+// Temporal
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // servicios
 import { ServiceModule } from './services/service.module';
@@ -29,9 +28,9 @@ import { ServiceModule } from './services/service.module';
     BrowserModule,
     AppRoutingModule,
     PagesModule,
-    SweetAlert2Module,
     FormsModule,
-    ServiceModule
+    ServiceModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

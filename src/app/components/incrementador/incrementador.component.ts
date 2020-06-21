@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
-import Swal from 'sweetalert2';
+import Swal from 'sweetalert';
 
 @Component({
   selector: 'app-incrementador',
@@ -47,7 +47,7 @@ export class IncrementadorComponent implements OnInit {
   cambiarPorc( valor: number ) {
     if (this.progreso >= 100 && valor > 0) {
       this.progreso = 100;
-      Swal.fire({
+      Swal({
         icon: 'error',
         title: 'Porcentaje Excedido',
         text: 'Excediste el porcentaje permitido!'
@@ -56,7 +56,7 @@ export class IncrementadorComponent implements OnInit {
     }
     if (this.progreso <= 0 && valor < 0) {
       this.progreso = 0;
-      Swal.fire({
+      Swal({
         icon: 'error',
         title: 'Porcentaje menor a 1',
         text: 'El porcentaje debe ser mayor a 1!'
