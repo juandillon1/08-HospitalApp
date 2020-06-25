@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>Seleccione la imagen:</h1>
+<div mat-dialog-content align="center">
+    <div class="row">
+        <div class="col-md-6">
+            <img *ngIf="!imagenTemporal" [src]="usuario.img | imagen" class="w150Modal mb-2">
+            <img *ngIf="imagenTemporal" [src]="imagenTemporal" class="w150Modal mb-2">
+
+        </div>
+        <div class="col-md-6" style="margin-top:10%">
+            <input type="file" id="file2" (change)="seleccionImagen( $event.target.files[0] )">
+            <label for="file2" class="btn-2">Subir Archivo</label>
+        </div>
+    </div>
+    <hr>
+</div>
+<div mat-dialog-actions align="center" class="mb-2">
+
+    <button (click)="cambiarImagen()" [disabled]="!imagenSubir" type="button" class="btn btn-success waves-effect waves-light m-r-10">
+                    <i class="fa fa-save"></i>
+                    Actualizar Imagen
+                </button>
+    <button (click)="onNoClick()" type="button" class="btn btn-danger waves-effect waves-light m-r-10">
+        <i class="fa fa-window-close"></i>
+        Cancelar
+    </button>
+</div>

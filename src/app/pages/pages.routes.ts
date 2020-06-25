@@ -10,6 +10,7 @@ import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 
 import { LoginGuardGuard } from '../services/guards/login-guard.guard';
+import { ProfileComponent } from './profile/profile.component';
 
 const pagesRoutes: Routes = [
 // pages se crea para separar el login del dashboard
@@ -25,6 +26,7 @@ const pagesRoutes: Routes = [
       {path: 'promesas', component: PromesasComponent, data: { titulo: 'Promesas' }},
       {path: 'rxjs', component: RxjsComponent, data: { titulo: 'RXJS' }},
       {path: 'settings', component: AccountSettingsComponent, data: { titulo: 'Ajustes Del Tema' }},
+      {path: 'perfil', component: ProfileComponent, data: { titulo: 'Perfil de Usuario' }},
       {path: '', pathMatch: 'full', redirectTo: '/dashboard'}
     ]
   }

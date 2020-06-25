@@ -8,11 +8,14 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+//Pipes
+import { PipesModule } from '../pipes/pipes.module';
 
 @NgModule({
     imports: [
         RouterModule,
-        CommonModule
+        CommonModule,
+        PipesModule
     ],
     declarations: [
         BreadcrumbsComponent,
