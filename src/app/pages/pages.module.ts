@@ -25,6 +25,8 @@ import { CommonModule } from '@angular/common';
 import { ModalComponent } from './profile/modal/modal.component';
 
 import { MatDialogModule } from '@angular/material/dialog';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { MatDialogModule } from '@angular/material/dialog';
         PromesasComponent,
         RxjsComponent,
         ProfileComponent,
-        ModalComponent
+        ModalComponent,
+        UsuariosComponent,
+        ModalUploadComponent
     ],
     exports: [
         DashboardComponent,

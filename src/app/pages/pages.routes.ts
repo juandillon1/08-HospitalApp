@@ -11,6 +11,7 @@ import { RxjsComponent } from './rxjs/rxjs.component';
 
 import { LoginGuardGuard } from '../services/guards/login-guard.guard';
 import { ProfileComponent } from './profile/profile.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
 
 const pagesRoutes: Routes = [
 // pages se crea para separar el login del dashboard
@@ -27,6 +28,8 @@ const pagesRoutes: Routes = [
       {path: 'rxjs', component: RxjsComponent, data: { titulo: 'RXJS' }},
       {path: 'settings', component: AccountSettingsComponent, data: { titulo: 'Ajustes Del Tema' }},
       {path: 'perfil', component: ProfileComponent, data: { titulo: 'Perfil de Usuario' }},
+      // Mantenimientos
+      {path: 'usuarios', component: UsuariosComponent, data: { titulo: 'Mantenimiento de Usuarios' }},
       {path: '', pathMatch: 'full', redirectTo: '/dashboard'}
     ]
   }
