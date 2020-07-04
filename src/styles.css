@@ -2,7 +2,7 @@
     cursor: pointer;
 }
 
-.pointer {
+.pointer:hover {
     cursor: pointer;
 }
 
@@ -126,3 +126,13 @@ body {
 
 
 /* Fin Tamaño imagen usuarios mantenimiento */
+
+
+/* Clases Sweet Alert */
+
+.sweet-crear {
+    background-color: green;
+}
+
+
+/* Fin Clases Sweet Alert */

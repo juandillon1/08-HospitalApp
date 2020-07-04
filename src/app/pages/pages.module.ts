@@ -27,6 +27,9 @@ import { ModalComponent } from './profile/modal/modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
+import { HospitalesComponent } from './hospitales/hospitales.component';
+import { MedicosComponent } from './medicos/medicos.component';
+import { MedicoComponent } from './medicos/medico.component';
 
 
 @NgModule({
@@ -43,7 +46,10 @@ import { ModalUploadComponent } from '../components/modal-upload/modal-upload.co
         ProfileComponent,
         ModalComponent,
         UsuariosComponent,
-        ModalUploadComponent
+        ModalUploadComponent,
+        HospitalesComponent,
+        MedicosComponent,
+        MedicoComponent
     ],
     exports: [
         DashboardComponent,

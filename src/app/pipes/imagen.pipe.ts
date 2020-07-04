@@ -6,7 +6,10 @@ import { URL_SERVICIO } from '../config/config';
 })
 export class ImagenPipe implements PipeTransform {
 
-  transform(img: string, tipo: string = 'usuario'): any {
+  transform(img: string, tipo?: string): any {
+    if ( tipo === '' ) {
+      tipo = 'usuario';
+    }
     let url = URL_SERVICIO + '/img';
     if ( !img ) {
       return url += '/usuarios/xxx';
@@ -26,7 +29,7 @@ export class ImagenPipe implements PipeTransform {
           url += '/hospitales/' + img;
           break;
         default:
-          console.log('Tipo imagen no existe, tipo: ' + tipo);
+          // console.log('Tipo imagen no existe, tipo: ' + tipo);
           url += '/usuarios/xxx';
           break;
       }
