@@ -1,1 +1,1 @@
-export const URL_SERVICIO = 'http://localhost:3000';
+export const URL_SERVICIO = 'https://hospitalbackendj.herokuapp.com';
